@@ -14,27 +14,25 @@ const registrationController = {
   },
 
   async updateStatus(req, res) {
-      try {
-          const { id } = req.params; // Extract registration ID from URL
-          const { status } = req.body; // Extract status from request body
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
 
-          if (!status) {
-              return res.status(400).json({ error: 'Status is required' });
-          }
+        if (!id) {
+            return res.status(400).json({ error: 'Registration ID is required' });
+        }
 
-          // Call the model to update the status
-          const updatedRegistration = await RegistrationModel.updateStatus(id, status);
-
-          if (!updatedRegistration) {
-              return res.status(404).json({ error: 'Registration not found' });
-          }
-
-          res.json(updatedRegistration);
-      } catch (error) {
-          console.error('Error updating registration status:', error.message);
-          res.status(500).json({ error: 'Failed to update registration status' });
-      }
-  },
+        const updatedRegistration = await RegistrationModel.updateRegistrationStatus(id, status);
+        
+        return res.json({
+            message: 'Registration status updated successfully',
+            registration: updatedRegistration
+        });
+    } catch (error) {
+        console.error('Error updating registration status:', error);
+        return res.status(500).json({ error: error.message });
+    }
+},
 
 
   async getRegistrationsByUserId(req, res) {

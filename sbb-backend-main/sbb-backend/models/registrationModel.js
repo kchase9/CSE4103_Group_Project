@@ -219,15 +219,11 @@ class RegistrationModel {
     }
   }
 
-  static async updateRegistrationStatus(req, res) {
+  static async updateRegistrationStatus(id, status) {
     try {
-        const { id } = req.params;
-        const { status } = req.body;
-
         const query = `
             UPDATE registrations 
-            SET status = $1, 
-                updated_at = CURRENT_TIMESTAMP 
+            SET status = $1 
             WHERE id = $2 
             RETURNING *
         `;
@@ -235,15 +231,14 @@ class RegistrationModel {
         const result = await pool.query(query, [status, id]);
 
         if (result.rows.length === 0) {
-            return res.status(404).json({ error: 'Registration not found' });
+            throw new Error('Registration not found');
         }
 
-        res.json(result.rows[0]);
+        return result.rows[0];
     } catch (error) {
-        console.error('Error updating registration status:', error);
-        res.status(500).json({ error: 'Failed to update registration status' });
+        throw new Error(`Failed to update registration status: ${error.message}`);
     }
-  }
+}
 
   // Search registrations
   static async search(searchTerm) {

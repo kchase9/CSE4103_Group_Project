@@ -10,6 +10,6 @@ router.get('/', registrationController.getRegistrations);
 router.get('/:id', registrationController.getRegistrationById);
 router.put('/:id', registrationController.updateRegistration);
 router.delete('/:id', registrationController.deleteRegistration);
-router.patch('/:id/status', registrationController.updateStatus);
+router.patch('/status/:id', registrationController.updateStatus);
 
 module.exports = router;

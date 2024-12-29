@@ -2,7 +2,7 @@ const UserModel = require('../models/userModel');
 const DocumentModel = require('../models/documentModel');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const pool = require('./db'); 
+// const pool = require('./db'); 
 
 const userController = {
   // Signup endpoint
