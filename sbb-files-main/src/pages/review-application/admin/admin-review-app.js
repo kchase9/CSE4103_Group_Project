@@ -140,7 +140,7 @@ const AdminReviewApp= () =>{
     
             if (reviewResponse.status === 201) {
                 // Now update the registration status
-                await axios.patch(`http://localhost:5000/api/registrations/${id}/status`, {
+                await axios.patch(`http://localhost:5000/api/registrations/status/${id}`, {
                     status: reviewStatus
                 }, {
                     headers: { 'Authorization': `Bearer ${token}` }
