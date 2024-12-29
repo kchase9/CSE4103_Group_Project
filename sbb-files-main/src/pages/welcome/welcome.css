@@ -1,0 +1,54 @@
+/* background Styling */
+.welcome-page {
+    background-image: url('../../welcome-bg.jpg');
+    background-position: center center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute; 
+    margin: 0; 
+    width: 100%;
+    height: auto;
+}
+
+/* Content */
+
+.welcome-title h1{
+    font-size: 64px;
+    font-weight: 300;
+    font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
+.welcome-form{
+    width: 35%;
+    height: fit-content;
+    background-color: white;
+    padding: 36px;
+}
+
+
+.welcome-form h2{   
+    font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+    color: #686868;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+hr{
+    border: none;
+    border-top: 0.5px solid #1e865ca4;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.divider {
+    display: block;
+    width: 1px; /* Thickness of the line */
+    height: auto;
+    background-color: white;
+    color: white;
+    align-self: stretch;
+    z-index: 1000;
+}

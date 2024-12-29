@@ -1,0 +1,52 @@
+
+
+/* Parent container for side-by-side layout */
+.side-by-side {
+  display: flex;
+  gap: 16px; /* Space between columns */
+  justify-content: space-between; /* Adjusts alignment */
+  align-items: flex-start; /* Aligns content at the top */
+}
+
+/* Individual columns */
+.column {
+  flex: 1; /* Ensures equal width */
+  min-width: 300px; /* Optional: Sets a minimum width */
+}
+
+/* Add some padding for readability */
+.column ol {
+  padding-left: 20px; /* Indent ordered lists */
+}
+
+.column p,
+.column ol {
+  margin-bottom: 16px; /* Space between elements */
+}
+
+.list-container .sect-container {
+  margin: 12px 0;
+}
+
+.programme-widget{
+  display: flex;
+  align-items: center;
+}
+
+.programme-widget div{
+  display: flex;
+  flex-direction: column;
+}
+
+.programme-widget p{
+  margin: 0;
+}
+
+.app-nav{
+  border-bottom: 1px solid #EF812D;
+  margin-bottom: 12px;
+}
+
+#app-nav-btn{
+  margin-top: 0;
+}

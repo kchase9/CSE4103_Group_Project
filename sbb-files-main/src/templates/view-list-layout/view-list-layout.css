@@ -1,0 +1,12 @@
+.list-container{
+    margin: 24px 0;
+}
+.searchbar-fields{
+    display: flex;
+    gap: 16px;
+    width: 50%;
+}
+
+.searchbar-fields input,.searchbar-fields  select{
+    width: 100%;
+}

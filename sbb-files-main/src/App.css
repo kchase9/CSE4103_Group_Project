@@ -1,0 +1,173 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Personal CSS, global styling */
+
+body{
+  background-color: #f1f1f1;
+}
+
+.page{
+  padding: 54px 86px 180px 86px;
+  box-sizing: border-box;
+  color: #686868;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Adds 16px spacing between all child elements, including inputs */
+}
+
+/* Style all input types */
+form :is(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="tel"], input[type="search"], input[type="date"], textarea, input[type="time"], input[type="checkbox"], input[type="radio"],input[type="file"], select, option) {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 14px;
+  outline: none; 
+  transition: border-color 0.3s; 
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* Add focus effect */
+form :is(input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="url"], input[type="tel"], input[type="search"], textarea, input[type="date"], input[type="time"], input[type="checkbox"], input[type="radio"], select, option):focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Optional focus shadow */
+}
+
+.btn{
+  width: auto;
+  align-self: center;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: solid 1px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-green{
+  background-color: #1e865c;
+  border-color: #124c34;
+  color: white;
+}
+.btn-orange{
+  background-color: #EF812D;
+  border-color: #B46122;
+  color: white;
+}
+.btn-red{
+  background-color: #D30004;
+  border-color: #9D0003;
+  color: white;
+}
+.btn-gray{
+  background-color: #686868;
+  border-color: #3a3a3a;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.heading h1{
+  font-size: 36px;
+  font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.heading h2{
+  font-size: 28px;
+  font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+  font-weight: 400;
+  margin: 12px 0;
+  color: black;
+}
+
+.heading p{
+  font-size: 16px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.sect-container{
+  display: flex;
+  flex-direction: column;
+  margin: 48px 0;
+  padding: 24px;
+  background-color: white;
+  /* height: fit-content; */
+}
+
+.green-border {
+  border: 1px solid #1e865c;
+  border-radius: 4px; 
+}
+
+.orange-border {
+  border: 1px solid #EF812D;
+  border-radius: 4px; 
+}
+
+.btn-container{
+  display: flex;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 24px;
+  gap: 16px;
+}
+
+.widget-col{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.widget-col p{
+  margin: 4px 0 0 0;
+}

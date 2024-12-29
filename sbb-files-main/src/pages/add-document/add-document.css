@@ -1,0 +1,35 @@
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-upload label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.file-upload input[type="file"] {
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+

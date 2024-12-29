@@ -1,0 +1,16 @@
+.toggle-btn {
+    color: orange;
+    border: none;
+    border-radius: 4px;
+    font-size: 26px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.sect-container{
+    margin: 12px 0;
+}
+
+.toggle-btn:hover {
+    color: darkorange;
+}

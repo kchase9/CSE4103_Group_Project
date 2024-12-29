@@ -1,0 +1,19 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list-subsect{
+    display: flex;
+    flex-direction: row;
+    width: 1000%;
+    margin: 0 12px 8px 0;
+    justify-content: space-between;
+}
+
+.label-input-pair-sectf{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
